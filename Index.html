@@ -1,0 +1,171 @@
+<!--
+  Sahil – Frontend Developer Portfolio
+  Single-file HTML you can open locally, take clean screenshots for Fiverr gallery,
+  or deploy as a simple portfolio. No external assets, fully responsive.
+--><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sahil – Frontend Developer</title>
+  <style>
+    :root{
+      --bg:#0f1221; --panel:#171a2b; --muted:#9aa4b2; --txt:#e9eef7;
+      --brand:#6677ff; --brand-2:#7bd3ff; --ok:#14b8a6; --card:#13162a;
+      --ring: 0 10px 40px rgba(102,119,255,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#0c1020,#0f1221 30%,#0a0d1a);color:var(--txt);}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    /* NAV */
+    .nav{position:sticky;top:0;backdrop-filter:blur(8px);background:rgba(15,18,33,.6);border-bottom:1px solid rgba(255,255,255,.06);z-index:50}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:700}
+    .logo-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;box-shadow:var(--ring)}
+    .logo-badge span{font-weight:900}
+    .nav ul{list-style:none;display:flex;gap:18px}
+    .nav a{padding:8px 12px;border-radius:10px;color:var(--muted)}
+    .nav a:hover{background:rgba(255,255,255,.06);color:var(--txt)}
+    .cta{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#0b1020;border:none;padding:10px 14px;border-radius:12px;font-weight:700;box-shadow:var(--ring)}
+    /* HERO */
+    .hero{padding:64px 0 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+    .hero h1{font-size:42px;line-height:1.1;margin:0}
+    .hero p{color:var(--muted);margin:14px 0 22px}
+    .chip{display:inline-flex;align-items:center;gap:8px;background:#0d132a;border:1px solid rgba(255,255,255,.08);padding:6px 10px;border-radius:999px;color:#cfe3ff;margin-bottom:14px}
+    .hero-card{background:linear-gradient(180deg,#11162b 0%,#0c1124 100%);border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:18px;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .stat{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:14px;text-align:center}
+    .stat b{font-size:22px}
+    /* SECTION */
+    section{padding:56px 0}
+    h2{font-size:28px;margin:0 0 18px}
+    .subtitle{color:var(--muted);margin-top:-6px}
+    /* CARDS */
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(180deg,#12162b,#0d1125);border:1px solid rgba(255,255,255,.06);border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+    .thumb{height:160px;background:radial-gradient(1200px 300px at -10% 120%, rgba(123,211,255,.15), transparent),
+                        radial-gradient(1000px 280px at 110% -10%, rgba(102,119,255,.18), transparent),
+                        linear-gradient(145deg,#0f1428,#0a0f22)}
+    .card-body{padding:16px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .tag{background:#0f152c;border:1px solid rgba(255,255,255,.08);color:#bcd7ff;padding:6px 10px;border-radius:999px;font-size:12px}
+    /* PROCESS */
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .step{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:14px}
+    .step b{display:inline-block;margin-bottom:8px;color:#d7e6ff}
+    /* FOOTER */
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:26px 0;color:var(--muted)}
+    /* RESPONSIVE */
+    @media (max-width: 960px){
+      .hero{grid-template-columns:1fr;}
+      .cards{grid-template-columns:repeat(2,1fr)}
+      .steps{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width: 560px){
+      .cards{grid-template-columns:1fr}
+      .hero h1{font-size:32px}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="logo">
+        <div class="logo-badge"><span>SF</span></div>
+        Sahil • Frontend Dev
+      </div>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a class="cta" href="#contact">Get a Quote</a></li>
+      </ul>
+    </div>
+  </header>  <main class="container">
+    <section class="hero">
+      <div>
+        <span class="chip">✨ Modern • Fast • Responsive</span>
+        <h1>Pixel‑perfect <span style="color:var(--brand-2)">Frontend</span> Websites with clean <span style="color:var(--brand)">HTML/CSS/JS</span></h1>
+        <p>I design & build high‑quality landing pages, business websites and portfolios with a focus on performance and UX. Deployed, optimized and ready to grow.</p>
+        <div style="display:flex;gap:12px"><a class="cta" href="#work">See Projects</a><a style="color:var(--brand-2)" href="#contact">Contact</a></div>
+        <div class="grid-3" style="margin-top:18px">
+          <div class="stat"><b>25+ </b><br/><span class="subtitle">Projects</span></div>
+          <div class="stat"><b>5/5</b><br/><span class="subtitle">Client Rating</span></div>
+          <div class="stat"><b>2 Days</b><br/><span class="subtitle">Avg. Delivery</span></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="thumb" style="height:220px;border-radius:12px"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+          <div class="stat"><b>HTML5</b><br/><span class="subtitle">Semantic</span></div>
+          <div class="stat"><b>CSS3</b><br/><span class="subtitle">Responsive</span></div>
+          <div class="stat"><b>JS</b><br/><span class="subtitle">Interactive</span></div>
+          <div class="stat"><b>SEO</b><br/><span class="subtitle">Basics</span></div>
+        </div>
+      </div>
+    </section><section id="work">
+  <h2>Featured Work</h2>
+  <p class="subtitle">A few recent UI builds. (Placeholders—replace copy with your own later.)</p>
+  <div class="cards" style="margin-top:14px">
+    <article class="card">
+      <div class="thumb"></div>
+      <div class="card-body">
+        <b>Startup Landing Page</b>
+        <p class="subtitle">Hero, features, CTA, pricing, contact.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="thumb"></div>
+      <div class="card-body">
+        <b>Business Website</b>
+        <p class="subtitle">Multi‑page site with forms & analytics.</p>
+        <div class="tags"><span class="tag">Responsive</span><span class="tag">SEO</span><span class="tag">Analytics</span></div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="thumb"></div>
+      <div class="card-body">
+        <b>Portfolio UI</b>
+        <p class="subtitle">Showcase, case studies, contact funnel.</p>
+        <div class="tags"><span class="tag">Accessibility</span><span class="tag">Animation</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Services</h2>
+  <div class="cards" style="margin-top:14px">
+    <div class="card"><div class="card-body"><b>Landing Pages</b><p class="subtitle">High‑converting pages with modern UI/UX.</p></div></div>
+    <div class="card"><div class="card-body"><b>Multi‑Page Websites</b><p class="subtitle">Company sites with about, services, blog, contact.</p></div></div>
+    <div class="card"><div class="card-body"><b>Performance & SEO</b><p class="subtitle">Optimized assets, metadata, and best practices.</p></div></div>
+  </div>
+</section>
+
+<section id="process">
+  <h2>Process</h2>
+  <div class="steps">
+    <div class="step"><b>1. Brief</b><p class="subtitle">We define goals, pages, and style.</p></div>
+    <div class="step"><b>2. Design</b><p class="subtitle">Wireframe & UI decisions.</p></div>
+    <div class="step"><b>3. Build</b><p class="subtitle">Clean HTML/CSS/JS.</p></div>
+    <div class="step"><b>4. Launch</b><p class="subtitle">Deploy & handoff.</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Let’s work together</h2>
+  <p class="subtitle">Tell me about your project and timeline. I’ll reply with a custom offer.</p>
+  <div style="display:flex;gap:12px;margin-top:10px">
+    <a class="cta" href="#">Message on Fiverr</a>
+    <a style="color:var(--ok)" href="#">View Packages</a>
+  </div>
+</section>
+
+  </main>  <footer>
+    <div class="container">© <span id="y"></span> Sahil — Frontend Developer. Built with ♥ in HTML/CSS/JS.</div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
